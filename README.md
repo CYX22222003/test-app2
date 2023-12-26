@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 ## Note
-This project is created to test the Github Pages function
+This project is created to test the Github Pages function.
+
+## Some thoughts about future development
+- A routing may be added to enable the navigation between different webpages using "react-route-dom". My first attempt failed, it's maybe due to the missing of basename in the BrowserRouter element.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
