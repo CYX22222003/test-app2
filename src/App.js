@@ -6,14 +6,9 @@ import Intro from './Intro';
 
 function App() {
   return (
-    <Router>
       <div className='App'>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route exact path="/Intro" element={<Intro />} />
-        </Routes>
+        <Home />
       </div>
-    </Router>
   );
 }
 
