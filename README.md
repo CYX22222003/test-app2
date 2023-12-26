@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+## Note
+This project is created to test the Github Pages function
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
