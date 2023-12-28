@@ -2,8 +2,9 @@
 ## Note
 This project is created to test the Github Pages function.
 
-## Some thoughts about future development
-- A routing may be added to enable the navigation between different webpages using "react-route-dom". My first attempt failed, it's maybe due to the missing of basename in the BrowserRouter element.
+## Notes of development
+- A routing has been added to enable the navigation between different webpages using "react-route-dom". The github pages only support HashRouter so the home page is now at "/#"
+- Planning to include a Bootstrap5 CSS framework to organize the elements of the webpage
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
