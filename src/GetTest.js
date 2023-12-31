@@ -39,6 +39,7 @@ export default function GetTest(){
                 <thead>
                 <tr>
                     <th>Title</th>
+                    <th>Author</th>
                     <th>Body</th>
                 </tr>
                 </thead>
@@ -47,6 +48,7 @@ export default function GetTest(){
                   return(
                   <tr>
                     <td>{ele.title}</td>
+                    <td>{ele.author}</td>
                     <td>{ele.body}</td>
                   </tr>)
                 })}

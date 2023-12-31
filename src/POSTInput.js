@@ -6,6 +6,8 @@ export default function POSTinput(){
     const [index, setIndex] = useState(1);
     const [title, setTitle] = useState("");
     const [blogbody, setBody] = useState("");
+    const [author, setAuthor] = useState("");
+
     const [texttype, setType] = useState("diary");
     const [bloglist, setBlogList] = useState([]);
     const [loading, setLoading] = useState(null);
@@ -19,7 +21,7 @@ export default function POSTinput(){
         
         setBlogList([...bloglist, {title : title, id : index, body : blogbody}]);
 
-        const obj_sent = {title : title, id : index, body : blogbody};
+        const obj_sent = {title : title, id : index, body : blogbody, author : author};
         console.log(JSON.stringify(obj_sent));
         fetch('https://cyxun.pythonanywhere.com/react_post', {
             mode: 'no-cors',
@@ -33,6 +35,7 @@ export default function POSTinput(){
             setLoading("successfully uploaded");
             setBody("");
             setTitle("");
+            setAuthor("")
             console.log("new page added");
         }).catch(error => {
             // Handle errors
@@ -54,6 +57,17 @@ export default function POSTinput(){
                 onChange = {(e) => {
                     setTitle(e.target.value);
                     
+                } 
+            }/>
+            
+            <br />
+            <label for="demo">Author: </label>
+            <span className="input-group-lg"></span>
+            <input type="text" 
+                className="form-control"
+                value={author} 
+                onChange = {(e) => {
+                    setAuthor(e.target.value);
                 } 
             }/>
 
