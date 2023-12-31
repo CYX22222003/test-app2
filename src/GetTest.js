@@ -19,6 +19,7 @@ export default function GetTest(){
         console.log('Data from Flask backend:', data.data);
         data.data.map((ele) => {
             console.log(ele.title + ": " + ele.body);
+            console.log(ele.author);
         })
 
         setDisplay(true);
