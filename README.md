@@ -4,7 +4,8 @@ This project is created to test the Github Pages function.
 
 ## Notes of development
 - A routing has been added to enable the navigation between different webpages using "react-route-dom". The github pages only support HashRouter so the home page is now at "/#"
-- Planning to include a Bootstrap5 CSS framework to organize the elements of the webpage
+- A Bootstrap5 CSS framework is used to organize the elements of the webpage.
+- A user is allowed to create, upload and delete a text article/blog
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
