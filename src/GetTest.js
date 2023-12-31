@@ -8,6 +8,34 @@ export default function GetTest(){
     const [display, setDisplay] = useState(false);
     const [info, setInfo] = useState("");
     const [objlst, setObjxs] = useState(null);
+
+    const handleDelete = (id) => {
+        setObjxs(objlst.filter(ele => ele.id !== id));
+        console.log(id + ": delete button is not activated");
+        fetch('https://cyxun.pythonanywhere.com/delete_blog', {
+            mode : 'no-cors',
+            method: 'POST',
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'X-Content-Type-Options' : 'nosniff'
+            },
+            body: JSON.stringify({"test data" : "test body", "id" : id})
+        }).then(() => {
+            console.log("POST Request sent");
+        }).catch(error => {
+            // Handle errors
+            alert(error);
+            console.log('There was a problem with the fetch operation:', error);
+        });
+        return null;
+    }
+
+    const handleEdit = () => {
+        alert("edit button is not activated");
+    }
+
     useEffect( () => {
     fetch('https://cyxun.pythonanywhere.com/blog_sender') //try to fetch from a remote server
     .then(response => {
@@ -42,6 +70,7 @@ export default function GetTest(){
                     <th>Title</th>
                     <th>Author</th>
                     <th>Body</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -51,6 +80,7 @@ export default function GetTest(){
                     <td>{ele.title}</td>
                     <td>{ele.author}</td>
                     <td>{ele.body}</td>
+                    <td><button onClick={() => handleDelete(ele.id)}>Delete</button>    <button onClick={handleEdit}>Edit</button></td>
                   </tr>)
                 })}
                 </tbody>
