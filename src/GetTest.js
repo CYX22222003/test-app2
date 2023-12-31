@@ -9,7 +9,7 @@ export default function GetTest(){
     const [info, setInfo] = useState("");
     const [objlst, setObjxs] = useState(null);
     useEffect( () => {
-    fetch('https://cyxun.pythonanywhere.com/react_get') //try to fetch from a remote server
+    fetch('https://cyxun.pythonanywhere.com/blog_sender') //try to fetch from a remote server
     .then(response => {
         return response.json();
     })
@@ -18,7 +18,7 @@ export default function GetTest(){
         
         console.log('Data from Flask backend:', data.data);
         data.data.map((ele) => {
-            console.log(ele.id + ": " + ele.name);
+            console.log(ele.title + ": " + ele.body);
         })
 
         setDisplay(true);
@@ -38,16 +38,16 @@ export default function GetTest(){
             <table class="table table-striped bg-light table-hover">
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Body</th>
                 </tr>
                 </thead>
                 <tbody>
                 {objlst.map(ele => {
                   return(
                   <tr>
-                    <td>{ele.id}</td>
-                    <td>{ele.name}</td>
+                    <td>{ele.title}</td>
+                    <td>{ele.body}</td>
                   </tr>)
                 })}
                 </tbody>

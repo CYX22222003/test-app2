@@ -30,11 +30,11 @@ export default function Navbar(){
                 </li>
 
                 <li className="nav-item">
-                <a className="nav-link" href="#react_post">POST Test</a>
+                <a className="nav-link" href="#react_post">CREATE</a>
                 </li>
 
                 <li className="nav-item">
-                <a className="nav-link" href="#react_get">GET Test</a>
+                <a className="nav-link" href="#react_get">SHOW</a>
                 </li>
             </ul>
         </div>

@@ -16,8 +16,7 @@ export default function POSTinput(){
             <div class="spinner-border text-warning"></div>
         ))
         setIndex(index + 1);
-        setBody("");
-        setTitle("");
+        
         setBlogList([...bloglist, {title : title, id : index, body : blogbody}]);
 
         const obj_sent = {title : title, id : index, body : blogbody};
@@ -32,6 +31,8 @@ export default function POSTinput(){
             body: JSON.stringify(obj_sent)
         }).then(() => {
             setLoading("successfully uploaded");
+            setBody("");
+            setTitle("");
             console.log("new page added");
         }).catch(error => {
             // Handle errors
