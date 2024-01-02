@@ -8,7 +8,7 @@ export default function POSTinput(){
     const [blogbody, setBody] = useState("");
     const [author, setAuthor] = useState("");
 
-    const [texttype, setType] = useState("diary");
+    const [texttype, setType] = useState("public");
     const [bloglist, setBlogList] = useState([]);
     const [loading, setLoading] = useState(null);
     
@@ -82,9 +82,8 @@ export default function POSTinput(){
             
             <label>Type: </label>
             <select className="form-select" onChange={e => setType(e.target.value)}>
-                <option value="diary">diary</option>
-                <option value="blog">blog</option>
-                <option value="others">others</option>
+                <option value="private">private</option>
+                <option value="public">public</option>
             </select>
             
             <br /><br  />

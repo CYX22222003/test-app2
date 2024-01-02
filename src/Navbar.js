@@ -36,6 +36,10 @@ export default function Navbar(){
                 <li className="nav-item">
                 <a className="nav-link" href="#react_get">SHOW</a>
                 </li>
+
+                <li className="nav-item">
+                <a className="nav-link" href="#log_out">LOG OUT</a>
+                </li>
             </ul>
         </div>
     </nav>
